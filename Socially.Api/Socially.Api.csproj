@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Socially.Contracts\Socially.Contracts.csproj" />
+    <ProjectReference Include="..\Socially.Application\Socially.Application.csproj" />
+    <ProjectReference Include="..\Socially.Infrastructure\Socially.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
