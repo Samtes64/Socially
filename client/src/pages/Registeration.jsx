@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { useState } from "react";
 
 function Registeration() {
   const initialValues = {
@@ -14,10 +15,27 @@ function Registeration() {
     password: Yup.string().min(4).max(20).required(),
   });
 
-  const onSubmit = (data) => {
-    axios.post("http://localhost:5045/api/User/Register", data).then(() => {
-      console.log(data);
-    });
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const onSubmit = (data, { setSubmitting }) => {
+    axios
+      .post("http://localhost:5045/api/User/Register", data)
+      .then(() => {
+        // Reset form fields
+        setSubmitting(false);
+        setErrorMessage("");
+        setSuccessMessage("User registered successfully.");
+      })
+      .catch((error) => {
+        if (error.response && error.response.data) {
+          setErrorMessage(error.response.data);
+        } else {
+          setErrorMessage("An error occurred while registering the user.");
+        }
+        setSubmitting(false);
+        console.error(error);
+      });
   };
 
   return (
@@ -28,6 +46,10 @@ function Registeration() {
         validationSchema={validateSchema}
       >
         <Form className="flex w-80 flex-col gap-4 border-slate-600 border-2 p-8">
+          {successMessage && (
+            <div className="text-green-600">{successMessage}</div>
+          )}
+          {errorMessage && <div className="text-red-600">{errorMessage}</div>}
           <label>Username: </label>
           <ErrorMessage
             className="alert alert-error"

@@ -22,9 +22,21 @@ namespace Socially.Api.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> CreateUser(User user)
         {
-            await _userService.CreateUserAsync(user);
-            return Ok();
+            try
+            {
+                await _userService.CreateUserAsync(user);
+                return Ok("User created successfully");
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(ex.Message); // Return 409 Conflict with the exception message
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An error occurred while creating the user");
+            }
         }
+
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginRequest loginRequest)
