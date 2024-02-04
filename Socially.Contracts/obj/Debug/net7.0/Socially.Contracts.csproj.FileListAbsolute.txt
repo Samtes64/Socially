@@ -1,0 +1,11 @@
+D:\projects\dotnet\social media\Socially\Socially.Contracts\bin\Debug\net7.0\Socially.Contracts.deps.json
+D:\projects\dotnet\social media\Socially\Socially.Contracts\bin\Debug\net7.0\Socially.Contracts.dll
+D:\projects\dotnet\social media\Socially\Socially.Contracts\bin\Debug\net7.0\Socially.Contracts.pdb
+D:\projects\dotnet\social media\Socially\Socially.Contracts\obj\Debug\net7.0\Socially.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\dotnet\social media\Socially\Socially.Contracts\obj\Debug\net7.0\Socially.Contracts.AssemblyInfoInputs.cache
+D:\projects\dotnet\social media\Socially\Socially.Contracts\obj\Debug\net7.0\Socially.Contracts.AssemblyInfo.cs
+D:\projects\dotnet\social media\Socially\Socially.Contracts\obj\Debug\net7.0\Socially.Contracts.csproj.CoreCompileInputs.cache
+D:\projects\dotnet\social media\Socially\Socially.Contracts\obj\Debug\net7.0\Socially.Contracts.dll
+D:\projects\dotnet\social media\Socially\Socially.Contracts\obj\Debug\net7.0\refint\Socially.Contracts.dll
+D:\projects\dotnet\social media\Socially\Socially.Contracts\obj\Debug\net7.0\Socially.Contracts.pdb
+D:\projects\dotnet\social media\Socially\Socially.Contracts\obj\Debug\net7.0\ref\Socially.Contracts.dll

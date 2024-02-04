@@ -1,0 +1,17 @@
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Infrastructure.deps.json
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Infrastructure.dll
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Infrastructure.pdb
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Application.dll
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Domain.dll
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Application.pdb
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Domain.pdb
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.csproj.AssemblyReference.cache
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.AssemblyInfoInputs.cache
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.AssemblyInfo.cs
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.csproj.CoreCompileInputs.cache
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.csproj.CopyComplete
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.dll
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\refint\Socially.Infrastructure.dll
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.pdb
+D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\ref\Socially.Infrastructure.dll
