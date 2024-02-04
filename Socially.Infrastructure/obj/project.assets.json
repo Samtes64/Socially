@@ -2734,11 +2734,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Infrastructure\\Socially.Infrastructure.csproj",
+      "projectUniqueName": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Infrastructure\\Socially.Infrastructure.csproj",
       "projectName": "Socially.Infrastructure",
-      "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Infrastructure\\Socially.Infrastructure.csproj",
+      "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Infrastructure\\Socially.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\",
-      "outputPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Infrastructure\\obj\\",
+      "outputPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SAMUEL TESFAYE\\AppData\\Roaming\\NuGet\\NuGet.Config",

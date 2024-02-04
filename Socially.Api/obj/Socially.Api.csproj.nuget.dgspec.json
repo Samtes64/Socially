@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj": {}
+    "D:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj": {}
   },
   "projects": {
-    "d:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj": {
+    "D:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj",
+        "projectUniqueName": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj",
         "projectName": "Socially.Api",
-        "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj",
+        "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj",
         "packagesPath": "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\",
-        "outputPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\obj\\",
+        "outputPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SAMUEL TESFAYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -31,8 +31,8 @@
               "d:\\projects\\dotnet\\social media\\Socially\\Socially.Application\\Socially.Application.csproj": {
                 "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Application\\Socially.Application.csproj"
               },
-              "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj": {
-                "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj"
+              "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj": {
+                "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj"
               },
               "D:\\projects\\dotnet\\social media\\Socially\\Socially.Infrastructure\\Socially.Infrastructure.csproj": {
                 "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Infrastructure\\Socially.Infrastructure.csproj"
@@ -166,14 +166,14 @@
         }
       }
     },
-    "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj": {
+    "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj",
+        "projectUniqueName": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj",
         "projectName": "Socially.Contracts",
-        "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj",
+        "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj",
         "packagesPath": "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\",
-        "outputPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\obj\\",
+        "outputPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SAMUEL TESFAYE\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -39,26 +39,26 @@ namespace Socially.Api.Controllers
 
 
         [HttpPost("login")]
-public async Task<IActionResult> Login(LoginRequest loginRequest)
-{
-    try
-    {
-        // Login logic...
-        var result = await _userService.LoginAsync(loginRequest.Username, loginRequest.Password);
+        public async Task<IActionResult> Login(LoginRequest loginRequest)
+        {
+            try
+            {
+                // Login logic...
+                var result = await _userService.LoginAsync(loginRequest.Username, loginRequest.Password);
 
-        // Check if the user part of the tuple is null
-        if (result.user == null)
-            return NotFound("User not found or incorrect credentials");
+                // Check if the user part of the tuple is null
+                if (result.UserName == null)
+                    return NotFound("User not found or incorrect credentials");
 
-        // You can generate and return JWT token here if needed
-
-        return Ok(result.user);
-    }
-    catch (Exception ex)
-    {
-        return BadRequest(ex.Message);
-    }
-}
+                // You can generate and return JWT token here if needed
+                var response = new LoginResponse(result.Id, result.UserName, result.Token);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/fOUYYdR+rur/6onxSDpNl0kd0N6ZlUC/2r06B/FMRU6XXjVqg+5+da2JUD4+AU2p1/2yBSGF48DivkJ0Enxaw==",
+  "dgSpecHash": "5S8hGNTJ48+eS06PdiULzwxS4f9Nx1JqncAQL5LpZyNiOPtPKHaSA21Fm04C8wn7+w2l5VHx9uVt+OTwrOVlCA==",
   "success": true,
-  "projectFilePath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj",
+  "projectFilePath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Api\\Socially.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

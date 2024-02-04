@@ -15,19 +15,24 @@ function Login() {
     axios
       .post("http://localhost:5045/api/User/Login", data)
       .then((response) => {
-        if (response.data.error) alert(response.data.error);
-        else {
-          setAuthState({
-            username: response.data.username,
-            id: response.data.id,
-            status: true,
-          });
+        setAuthState({
+          username: response.data.username,
+          id: response.data.id,
+          status: true,
+        });
 
-          localStorage.setItem("accessToken", response.data.token);
-          navigate("/");
+        localStorage.setItem("accessToken", response.data.token);
+        navigate("/");
+      })
+      .catch((error) => {
+        if (error.response) {
+          alert("can't log in");
+        } else {
+          alert("An error occurred while processing your request");
         }
       });
   };
+
   return (
     <div className="grid justify-center gap-3">
       Username

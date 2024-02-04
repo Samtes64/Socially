@@ -45,7 +45,7 @@ namespace Socially.Application.Services.Users
             await _usersCollection.InsertOneAsync(user);
         }
 
-        public async Task<(string token, User user)> LoginAsync(string username, string password)
+        public async Task<AuthenticationResult> LoginAsync(string username, string password)
         {
             if (string.IsNullOrEmpty(username))
                 throw new ArgumentException("Username cannot be null or empty.", nameof(username));
@@ -68,7 +68,7 @@ namespace Socially.Application.Services.Users
                 var token = _jwtService.GenerateJwtToken(user);
 
                 // Return the token and user
-                return (token, user);
+                return new AuthenticationResult(user.Id,user.Username,token);
             }
             else
             {

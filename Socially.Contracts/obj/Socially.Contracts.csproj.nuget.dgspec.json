@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj": {}
+    "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj": {}
   },
   "projects": {
-    "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj": {
+    "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj",
+        "projectUniqueName": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj",
         "projectName": "Socially.Contracts",
-        "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj",
+        "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\Socially.Contracts.csproj",
         "packagesPath": "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\",
-        "outputPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\obj\\",
+        "outputPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SAMUEL TESFAYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
