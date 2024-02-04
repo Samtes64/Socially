@@ -58,3 +58,8 @@ D:\projects\dotnet\social media\Socially\Socially.Api\obj\Debug\net7.0\refint\So
 D:\projects\dotnet\social media\Socially\Socially.Api\obj\Debug\net7.0\Socially.Api.pdb
 D:\projects\dotnet\social media\Socially\Socially.Api\obj\Debug\net7.0\Socially.Api.genruntimeconfig.cache
 D:\projects\dotnet\social media\Socially\Socially.Api\obj\Debug\net7.0\ref\Socially.Api.dll
+D:\projects\dotnet\social media\Socially\Socially.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\projects\dotnet\social media\Socially\Socially.Api\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\projects\dotnet\social media\Socially\Socially.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\projects\dotnet\social media\Socially\Socially.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\projects\dotnet\social media\Socially\Socially.Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

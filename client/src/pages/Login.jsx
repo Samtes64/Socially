@@ -13,7 +13,7 @@ function Login() {
   const login = () => {
     const data = { username: username, password: password };
     axios
-      .post("https://posting-server.onrender.com/auth/login", data)
+      .post("http://localhost:5045/api/User/Login", data)
       .then((response) => {
         if (response.data.error) alert(response.data.error);
         else {

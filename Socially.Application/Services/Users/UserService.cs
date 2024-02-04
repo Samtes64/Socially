@@ -3,6 +3,10 @@ using MongoDB.Driver;
 using System.Threading.Tasks;
 using Socially.Domain.Models;
 using Microsoft.Extensions.Options;
+using Socially.Infrastructure;
+
+
+
 
 namespace Socially.Application.Services.Users
 {
@@ -10,6 +14,8 @@ namespace Socially.Application.Services.Users
     public class UserService : IUserService
     {
         private readonly IMongoCollection<User> _usersCollection;
+        private readonly JwtService _jwtService;
+        
 
         private readonly IOptions<DatabaseSettings> _dbSettings;
 
@@ -19,6 +25,7 @@ namespace Socially.Application.Services.Users
             var mongoClient = new MongoClient(dbSettings.Value.ConnectionString);
             var mongoDatabase = mongoClient.GetDatabase(dbSettings.Value.DatabaseName);
             _usersCollection = mongoDatabase.GetCollection<User>(dbSettings.Value.UsersCollectionName);
+            _jwtService = new JwtService("my_very_super_super_long_and_very_secretive_secret_key");
         }
 
 
@@ -38,7 +45,7 @@ namespace Socially.Application.Services.Users
             await _usersCollection.InsertOneAsync(user);
         }
 
-        public async Task<User> LoginAsync(string username, string password)
+        public async Task<(string token, User user)> LoginAsync(string username, string password)
         {
             if (string.IsNullOrEmpty(username))
                 throw new ArgumentException("Username cannot be null or empty.", nameof(username));
@@ -57,8 +64,11 @@ namespace Socially.Application.Services.Users
             // Compare the provided password with the hashed password stored in the database
             if (BCrypt.Net.BCrypt.Verify(password, user.Password))
             {
-                // Passwords match, return the user
-                return user;
+                // Passwords match, generate JWT token
+                var token = _jwtService.GenerateJwtToken(user);
+
+                // Return the token and user
+                return (token, user);
             }
             else
             {

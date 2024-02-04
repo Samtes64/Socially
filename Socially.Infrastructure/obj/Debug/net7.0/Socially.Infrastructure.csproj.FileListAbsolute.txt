@@ -1,9 +1,7 @@
 D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Infrastructure.deps.json
 D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Infrastructure.dll
 D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Infrastructure.pdb
-D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Application.dll
 D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Domain.dll
-D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Application.pdb
 D:\projects\dotnet\social media\Socially\Socially.Infrastructure\bin\Debug\net7.0\Socially.Domain.pdb
 D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.csproj.AssemblyReference.cache
 D:\projects\dotnet\social media\Socially\Socially.Infrastructure\obj\Debug\net7.0\Socially.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig

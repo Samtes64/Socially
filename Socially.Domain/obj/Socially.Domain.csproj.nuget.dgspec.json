@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {}
+    "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {}
   },
   "projects": {
-    "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {
+    "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
+        "projectUniqueName": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
         "projectName": "Socially.Domain",
-        "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
+        "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
         "packagesPath": "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\obj\\",
+        "outputPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SAMUEL TESFAYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
