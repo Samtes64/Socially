@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Socially.Domain.Models;
-using Socially.Application.Services.Users;
-using Socially.Contracts.User;
-using Socially.Infrastructure;
-using System.Threading.Tasks;
 
 namespace Socially.Api.Controllers
 {
@@ -11,6 +8,8 @@ namespace Socially.Api.Controllers
     [ApiController]
     public class PostController : ControllerBase
     {
+        private readonly ILogger<Post> _logger;
+
         private readonly IPostService _postService;
 
         public PostController(IPostService postService)
@@ -18,24 +17,22 @@ namespace Socially.Api.Controllers
             _postService = postService;
         }
 
-        [HttpPost]
-        [MiddlewareFilter(typeof(JwtMiddleware))] // Apply the middleware
-        public async Task<IActionResult> CreatePost([FromBody] Post post)
+        [HttpPost("create")]
+        // [MiddlewareFilter(typeof(JwtMiddleware))]
+        public async Task<IActionResult> CreatePost(Post post)
         {
-            try
-            {
-                // Extract the username from the JWT token
-                string username = HttpContext.Items["Username"].ToString();
-                post.Username = username;
+            // Access the username from HttpContext.Items set by JwtMiddleware
+            // string username = HttpContext.Items["Username"]?.ToString();
 
-               await _postService.CreatePostAsync(post); // Await the asynchronous operation
+            await _postService.CreatePostAsync(post);
+            return Ok("Post created successfully");
+        }
 
-                return CreatedAtAction(nameof(CreatePost), new { id = post.Id }, post); // Construct the CreatedAtAction result
-            }
-            catch (System.Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var posts = await _postService.GetAllAsync();
+            return Ok(posts);
         }
     }
 }

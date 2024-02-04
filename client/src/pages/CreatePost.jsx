@@ -1,16 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../helpers/AuthContext";
 
 function CreatePost() {
+
+  const { authState } = useContext(AuthContext);
+  
   const initialValues = {
     title: "",
-    postText: "",
+    TextBody: "",
+    username:authState.username
   };
-
+  
   useEffect(() => {
+    console.log(authState)
     if (!localStorage.getItem("accessToken")) {
       navigate(`/login`);
     }
@@ -18,12 +24,12 @@ function CreatePost() {
 
   const validateSchema = Yup.object().shape({
     title: Yup.string().required("you must input a title"),
-    postText: Yup.string().required(),
+    TextBody: Yup.string().required(),
   });
 
   const onSubmit = (data) => {
     axios
-      .post("https://posting-server.onrender.com/posts", data, {
+      .post("http://localhost:5045/api/Post/create", data, authState.username, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then(() => {
@@ -32,6 +38,7 @@ function CreatePost() {
   };
 
   let navigate = useNavigate();
+
   return (
     <div className=" flex justify-center">
       <Formik
@@ -55,12 +62,12 @@ function CreatePost() {
           <label>Post: </label>
           <ErrorMessage
             className="alert alert-error"
-            name="postText"
+            name="TextBody"
             component="span"
           />
           <Field
             id="inputCreatePost"
-            name="postText"
+            name="TextBody"
             placeholder="(Ex. Post...)"
             className="border-slate-300 border-[1px] p-1"
           />

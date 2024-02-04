@@ -16,10 +16,11 @@ function Login() {
       .post("http://localhost:5045/api/User/Login", data)
       .then((response) => {
         setAuthState({
-          username: response.data.username,
+          username: response.data.userName,
           id: response.data.id,
           status: true,
         });
+        console.log(response)
 
         localStorage.setItem("accessToken", response.data.token);
         navigate("/");

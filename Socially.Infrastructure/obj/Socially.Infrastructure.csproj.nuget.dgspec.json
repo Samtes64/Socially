@@ -4,14 +4,14 @@
     "D:\\projects\\dotnet\\social media\\Socially\\Socially.Infrastructure\\Socially.Infrastructure.csproj": {}
   },
   "projects": {
-    "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {
+    "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
+        "projectUniqueName": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
         "projectName": "Socially.Domain",
-        "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
+        "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
         "packagesPath": "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\",
-        "outputPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\obj\\",
+        "outputPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SAMUEL TESFAYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {
-                "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj"
+              "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {
+                "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj"
               }
             }
           }

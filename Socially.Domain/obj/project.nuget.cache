@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hXibXzgLhNP7YdyglKwsg3PALwXVzNS2hPBtzK6GKfx2/Vfw4y+jAH0TDsI5tTwl15aXIFaPDBGcy9xbRyFrRg==",
+  "dgSpecHash": "YWhoEITky7tgrT8rwq4WHIdyH+gu4Ptv+XJblZaIXJ/7mrN0Bgszmo/KNUu48Oi6xny6ot8ig7R3VQWlSCtiWQ==",
   "success": true,
-  "projectFilePath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
+  "projectFilePath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\SAMUEL TESFAYE\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

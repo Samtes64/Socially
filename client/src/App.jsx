@@ -13,33 +13,21 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function App() {
-  const [authState, setAuthState] = useState({
-    username: "",
-    id: 0,
-    status: false,
-  });
-
-  useEffect(() => {
-    axios
-      .get("https://posting-server.onrender.com/auth/auth", {
-        headers: { accessToken: localStorage.getItem("accessToken") },
-      })
-      .then((response) => {
-        if (response.data.error) setAuthState({ ...authState, status: false });
-        else {
-          setAuthState({
-            username: response.data.username,
-            id: response.data.id,
-            status: true,
-          });
-        }
-      });
-  }, []);
-
-  const logout = () => {
-    localStorage.removeItem("accessToken");
-    setAuthState({ username: "", id: 0, status: false });
-  };
+  
+    const [authState, setAuthState] = useState(() => {
+      const storedAuthState = JSON.parse(localStorage.getItem("authState"));
+      return storedAuthState || { username: "", id: 0, status: false };
+    });
+  
+    useEffect(() => {
+      localStorage.setItem("authState", JSON.stringify(authState));
+      console.log(authState)
+    }, [authState]);
+  
+    const logout = () => {
+      localStorage.removeItem("authState");
+      setAuthState({ username: "", id: 0, status: false });
+    };
 
   return (
     <div>

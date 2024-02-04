@@ -5290,8 +5290,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {
-              "projectPath": "d:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj"
+            "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj": {
+              "projectPath": "D:\\projects\\dotnet\\social media\\Socially\\Socially.Domain\\Socially.Domain.csproj"
             }
           }
         }

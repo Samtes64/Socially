@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using Socially.Domain.Models;
-using Socially.Contracts.Post;
+
 
 
 namespace Socially.Application.Services.Posts
@@ -29,6 +29,9 @@ namespace Socially.Application.Services.Posts
         {
             await  _postsCollection.InsertOneAsync(post);
         }
+
+        public async Task<IEnumerable<Post>> GetAllAsync() =>
+            await _postsCollection.Find(_ => true).ToListAsync();
 
         // Add other methods for handling posts as needed
     }
