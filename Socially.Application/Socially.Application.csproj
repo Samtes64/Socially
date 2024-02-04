@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Socially.Domain\Socially.Domain.csproj" />
     <ProjectReference Include="..\Socially.Infrastructure\Socially.Infrastructure.csproj" />
+    <ProjectReference Include="..\Socially.Contracts\Socially.Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>

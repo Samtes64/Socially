@@ -15,3 +15,5 @@ D:\projects\dotnet\social media\Socially\Socially.Application\obj\Debug\net7.0\S
 D:\projects\dotnet\social media\Socially\Socially.Application\obj\Debug\net7.0\ref\Socially.Application.dll
 D:\projects\dotnet\social media\Socially\Socially.Application\bin\Debug\net7.0\Socially.Infrastructure.dll
 D:\projects\dotnet\social media\Socially\Socially.Application\bin\Debug\net7.0\Socially.Infrastructure.pdb
+D:\projects\dotnet\social media\Socially\Socially.Application\bin\Debug\net7.0\Socially.Contracts.dll
+D:\projects\dotnet\social media\Socially\Socially.Application\bin\Debug\net7.0\Socially.Contracts.pdb

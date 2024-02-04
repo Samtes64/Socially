@@ -1,11 +1,11 @@
-using Socially.Application.Services.Users;
-using Socially.Domain.Models;
-
+using Microsoft.OpenApi.Models;
+using Socially.Infrastructure;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
-var  policyName = "_myAllowSpecificOrigins";
+var policyName = "_myAllowSpecificOrigins";
 
-
+// Add CORS policy
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: policyName,
@@ -20,35 +20,54 @@ builder.Services.AddCors(options =>
 });
 
 // Add services to the container.
-
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Add Swagger
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
+});
+
+// Add IUserService/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddIUserServiceGen();
 
 builder.Services.Configure<DatabaseSettings>(
     builder.Configuration.GetSection("MongoDB")
 );
 
-builder.Services.AddTransient<IUserService,UserService>();
-
-
+builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IPostService, PostsService>();
 
 var app = builder.Build();
+
+// Enable middleware to serve generated Swagger as a JSON endpoint.
+app.UseSwagger();
+
+// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+// specifying the Swagger JSON endpoint.
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API V1");
+    // Optionally, set up other configurations like UI customization or passing parameters.
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseIUserService();
+    app.UseIUserServiceUI();
 }
-app.UseCors(policyName); 
+
+app.UseCors(policyName);
+
+// Add JWT middleware
+app.Map("/api/Post", app =>
+{
+    app.UseMiddleware<JwtMiddleware>("my_very_super_super_long_and_very_secretive_secret_key");
+});
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
