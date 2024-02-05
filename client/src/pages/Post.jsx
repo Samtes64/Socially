@@ -55,7 +55,7 @@ function Post() {
 
   const deletePost = (PostId) => {
     axios
-      .delete(`https://posting-server.onrender.com/posts/${PostId}`, {
+      .delete(`http://localhost:5045/api/Post/${PostId}`, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then(() => {
@@ -77,7 +77,7 @@ function Post() {
     if (option === "title") {
       let newTitle = prompt("Enter New Title");
       axios.put(
-        `https://posting-server.onrender.com/posts/title`,
+        `http://localhost:5045/api/Post/title`,
         {
           newTitle: newTitle,
           id: id,
@@ -88,7 +88,7 @@ function Post() {
     } else {
       let newPostText = prompt("Enter new body:");
       axios.put(
-        `https://posting-server.onrender.com/posts/postText`,
+        `http://localhost:5045/api/Post/postText`,
         {
           newText: newPostText,
           id: id,
