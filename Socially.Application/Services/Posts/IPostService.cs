@@ -8,5 +8,7 @@ public interface IPostService
         Task CreatePostAsync(Post post);
 
         Task<IEnumerable<Post>> GetAllAsync();
+
+        Post GetPostById(string id);
         
     }

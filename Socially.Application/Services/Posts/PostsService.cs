@@ -44,10 +44,18 @@ namespace Socially.Application.Services.Posts
             return posts;
         }
 
+        public Post GetPostById(string id)
+        {
+            return _postsCollection.Find(post => post.Id == id).FirstOrDefault();
+        }
+
         private async Task<List<Like>> GetLikesForPost(string postId)
         {
             return await _likesCollection.Find(like => like.PostId == postId).ToListAsync();
         }
+
+
+
         // Add other methods for handling posts as needed
     }
 }

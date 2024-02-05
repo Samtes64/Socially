@@ -34,5 +34,18 @@ namespace Socially.Api.Controllers
             var posts = await _postService.GetAllAsync();
             return Ok(posts);
         }
+
+        [HttpGet("{id:length(24)}", Name = "GetPost")]
+        public ActionResult<Post> GetPost(string id)
+        {
+            var post = _postService.GetPostById(id);
+
+            if (post == null)
+            {
+                return NotFound();
+            }
+
+            return post;
+        }
     }
 }

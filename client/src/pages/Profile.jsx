@@ -26,7 +26,7 @@ export default function Profile() {
   return (
     <div className="">
       <div className="">
-        <h1>Username: {username}</h1>
+        <h1>Username: {authState.username}</h1>
         {authState.username === username && (
           <button
             onClick={() => {

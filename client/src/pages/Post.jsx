@@ -64,7 +64,7 @@ function Post() {
 
   useEffect(() => {
     axios
-      .get(`https://posting-server.onrender.com/posts/byId/${id}`)
+      .get(`http://localhost:5045/api/Post/${id}`)
       .then((response) => {
         setPostObject(response.data);
       });
@@ -127,7 +127,7 @@ function Post() {
             }
           }}
         >
-          {postObject.postText}
+          {postObject.textBody}
         </div>
         <div className="px-5 flex-[20%] border-b-slate-400 border-b-2 flex items-center justify-between bg-blue-500 text-white">
           <div>{postObject.username}</div>
