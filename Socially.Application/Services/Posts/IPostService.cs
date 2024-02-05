@@ -10,5 +10,7 @@ public interface IPostService
         Task<IEnumerable<Post>> GetAllAsync();
 
         Post GetPostById(string id);
+
+        List<Post> GetPostsByUserUsername(string userUsername);
         
     }

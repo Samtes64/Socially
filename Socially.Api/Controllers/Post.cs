@@ -47,5 +47,18 @@ namespace Socially.Api.Controllers
 
             return post;
         }
+
+        [HttpGet("byUserUsername/{userUsername}")]
+        public ActionResult<List<Post>> GetPostsByUserId(string userUsername)
+        {
+            var posts = _postService.GetPostsByUserUsername(userUsername);
+
+            if (posts == null)
+            {
+                return NotFound();
+            }
+
+            return posts;
+        }
     }
 }

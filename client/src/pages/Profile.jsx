@@ -13,12 +13,9 @@ export default function Profile() {
 
   useEffect(() => {
     axios
-      .get(`https://posting-server.onrender.com/auth/basicinfo/${id}`)
-      .then((response) => {
-        setUsername(response.data.username);
-      });
-    axios
-      .get(`https://posting-server.onrender.com/posts/byuserId/${id}`)
+      .get(
+        `http://localhost:5045/api/Post/byUserUsername/${authState.username}`
+      )
       .then((response) => {
         setListOfPosts(response.data);
       });
@@ -59,11 +56,11 @@ export default function Profile() {
                 }}
                 className="flex-[60%] items-center justify-center grid"
               >
-                {value.postText}
+                {value.textBody}
               </div>
               <div className="pl-5 flex-[20%] border-b-slate-400 border-b-2 items-center  bg-blue-500 text-white flex justify-between px-3">
                 {value.username}
-                <label>{value.Likes.length} </label>
+                {/* <label>{value.Likes.length} </label> */}
               </div>
             </div>
           );
