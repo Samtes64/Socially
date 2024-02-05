@@ -11,6 +11,12 @@ public interface IPostService
 
         Post GetPostById(string id);
 
+        void UpdatePostTitle(string id, string newTitle);
+
+        void UpdatePostText(string id, string newText);
+
+        void DeletePost(string id);
+
         List<Post> GetPostsByUserUsername(string userUsername);
         
     }

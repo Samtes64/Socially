@@ -60,5 +60,29 @@ namespace Socially.Api.Controllers
 
             return posts;
         }
+
+        [HttpPut("title")]
+        public IActionResult UpdatePostTitle(string id, string newTitle)
+        {
+            _postService.UpdatePostTitle(id, newTitle);
+
+            return NoContent();
+        }
+
+        [HttpPut("postText")]
+        public IActionResult UpdatePostText(string id, string newText)
+        {
+            _postService.UpdatePostText(id, newText);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id:length(24)}")]
+        public IActionResult DeletePost(string id)
+        {
+            _postService.DeletePost(id);
+
+            return NoContent();
+        }
     }
 }

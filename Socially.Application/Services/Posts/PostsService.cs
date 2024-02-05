@@ -54,6 +54,21 @@ namespace Socially.Application.Services.Posts
             return _postsCollection.Find(post => post.Username == userUsername).ToList();
         }
 
+        public void UpdatePostTitle(string id, string newTitle)
+        {
+            _postsCollection.UpdateOne(post => post.Id == id, Builders<Post>.Update.Set("Title", newTitle));
+        }
+
+        public void UpdatePostText(string id, string newText)
+        {
+            _postsCollection.UpdateOne(post => post.Id == id, Builders<Post>.Update.Set("PostText", newText));
+        }
+
+        public void DeletePost(string id)
+        {
+            _postsCollection.DeleteOne(post => post.Id == id);
+        }
+
         private async Task<List<Like>> GetLikesForPost(string postId)
         {
             return await _likesCollection.Find(like => like.PostId == postId).ToListAsync();
