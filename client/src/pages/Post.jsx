@@ -14,10 +14,11 @@ function Post() {
   const addComment = () => {
     axios
       .post(
-        "https://posting-server.onrender.com/comments",
+        "http://localhost:5045/api/comments",
         {
-          commentBody: newComment,
+          Text: newComment,
           PostId: id,
+          Username: authState.username,
         },
         {
           headers: {
@@ -29,7 +30,7 @@ function Post() {
         if (response.data.error) alert(response.data.error);
         else {
           const commentToAdd = {
-            commentBody: newComment,
+            text: newComment,
             username: response.data.username,
           };
           setComments([...comments, commentToAdd]);
@@ -40,8 +41,8 @@ function Post() {
 
   const deleteComment = (commentId) => {
     axios
-      .delete(`https://posting-server.onrender.com/comments/${commentId}`, {
-        headers: { accessToken: localStorage.getItem("accessToken") },
+      .delete(`http://localhost:5045/api/comments/${commentId}`, {
+        
       })
       .then(() => {
         setComments(
@@ -63,17 +64,13 @@ function Post() {
   };
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5045/api/Post/${id}`)
-      .then((response) => {
-        setPostObject(response.data);
-      });
+    axios.get(`http://localhost:5045/api/Post/${id}`).then((response) => {
+      setPostObject(response.data);
+    });
 
-    axios
-      .get(`https://posting-server.onrender.com/comments/${id}`)
-      .then((response) => {
-        setComments(response.data);
-      });
+    axios.get(`http://localhost:5045/api/comments/${id}`).then((response) => {
+      setComments(response.data);
+    });
   }, []);
 
   const editPost = (option) => {
@@ -163,7 +160,7 @@ function Post() {
           {comments.map((comment, key) => {
             return (
               <div key={key} className="m-4 border p-5 rounded-md ">
-                {comment.commentBody}
+                {comment.text}
                 <div className="justify-end flex text-slate-700">
                   User: {comment.username}
                 </div>
