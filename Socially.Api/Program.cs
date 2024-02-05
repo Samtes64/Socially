@@ -1,3 +1,4 @@
+using Socially.Application.Services.Likes;
 using Socially.Application.Services.Posts;
 using Socially.Application.Services.Users;
 using Socially.Domain.Models;
@@ -46,6 +47,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IPostService, PostsService>();
+builder.Services.AddTransient<ILikesService, LikesService>();
 
 
 

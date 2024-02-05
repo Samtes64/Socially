@@ -14,5 +14,11 @@ namespace Socially.Domain.Models
         public string TextBody { get; set; }
 
         public string? Username { get; set; }
+
+        [BsonIgnoreIfNull]
+        public List<Comment>? Comments { get; set; }
+
+        [BsonIgnoreIfNull]
+        public List<Like>? Likes { get; set; }
     }
 }

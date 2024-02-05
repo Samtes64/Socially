@@ -8,5 +8,10 @@ namespace Socially.Domain.Models
 
         public string? PostsCollectionName { get; set; }
 
+        public string? LikesCollectionName { get; set; }
+
+        public string? CommentsCollectionName { get; set; }
+
+
     }
 }
